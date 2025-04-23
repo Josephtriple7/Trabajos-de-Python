@@ -5,50 +5,52 @@ lista_estudiantes = []
 
 while True:
     mostrar_menu()
-    opcion = input("Selecciona una opción: ")
+    opcion = input("Seleccione una opción (1-5): ")
 
     if opcion == '1':
-        nombre = input("Nombre del estudiante: ")
-        edad_input = input("Edad: ")
+        print("\n/---- REGISTRO DE ESTUDIANTE ----\\")
+        nombre = input("| Nombre: ")
+        edad_input = input("| Edad: ")
         edad = validar_entero_positivo(edad_input)
         if edad is None:
-            print("⚠️ Edad inválida.")
+            print("| ⚠️ Edad inválida. Debe ser un número entero positivo.")
             continue
-        carrera = input("Carrera: ")
+        carrera = input("| Carrera: ")
         estudiante = Estudiante(nombre, edad, carrera)
         lista_estudiantes.append(estudiante)
-        print("✅ Estudiante registrado.")
+        print("\\ Estudiante registrado con éxito. /")
 
     elif opcion == '2':
-        nombre = input("Nombre del estudiante: ")
+        nombre = input("\nIngrese el nombre del estudiante: ")
         estudiante = buscar_estudiante(nombre, lista_estudiantes)
         if estudiante:
-            nota_input = input("Calificación a agregar (0-100): ")
+            nota_input = input("Ingrese la calificación (0-100): ")
             try:
                 nota = float(nota_input)
                 estudiante.agregar_calificacion(nota)
             except ValueError:
-                print("⚠️ Calificación inválida.")
+                print("│ ⚠️ Calificación inválida.")
         else:
-            print("⚠️ Estudiante no encontrado.")
+            print("│ ⚠️ Estudiante no encontrado.")
 
     elif opcion == '3':
-        nombre = input("Nombre del estudiante: ")
+        nombre = input("\nNombre del estudiante: ")
         estudiante = buscar_estudiante(nombre, lista_estudiantes)
         if estudiante:
             estudiante.mostrar_info()
         else:
-            print("⚠️ Estudiante no encontrado.")
+            print("│ ⚠️ Estudiante no encontrado.")
 
     elif opcion == '4':
+        print("\n/---- LISTA DE ESTUDIANTES ----\\")
         if not lista_estudiantes:
-            print("⚠️ No hay estudiantes registrados.")
+            print("| ⚠️ No hay estudiantes registrados.           |")
         for est in lista_estudiantes:
             est.mostrar_info()
-            print("-" * 30)
+        print("\\--------------------------------/")
 
     elif opcion == '5':
-        print("👋 ¡Hasta luego!")
+        print("\n\\ Gracias por usar el programa. ¡Hasta luego! /")
         break
     else:
-        print("⚠️ Opción no válida.")
+        print("│ ⚠️ Opción no válida. Intente de nuevo.")

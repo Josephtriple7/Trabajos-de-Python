@@ -4,12 +4,15 @@
 # del programa en módulos (es decir, en archivos .py diferentes).
 
 def mostrar_menu():
-    print("\n=== MENÚ PRINCIPAL ===")
-    print("1. Registrar nuevo estudiante")
-    print("2. Agregar calificación a un estudiante")
-    print("3. Mostrar información de un estudiante")
-    print("4. Mostrar todos los estudiantes")
-    print("5. Salir")
+    print("\n/-------------------------------\\")
+    print("|        MENÚ PRINCIPAL         |")
+    print("|-------------------------------|")
+    print("| 1. Registrar nuevo estudiante |")
+    print("| 2. Agregar calificación       |")
+    print("| 3. Mostrar info de estudiante |")
+    print("| 4. Mostrar todos los alumnos  |")
+    print("| 5. Salir                      |")
+    print("\\-------------------------------/")
 
 def validar_entero_positivo(entrada):
     try:
