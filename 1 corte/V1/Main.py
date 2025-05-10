@@ -13,7 +13,7 @@ while True:
         edad_input = input("| Edad: ")
         edad = validar_entero_positivo(edad_input)
         if edad is None:
-            print("| ⚠️ Edad inválida. Debe ser un número entero positivo.")
+            print("|  Edad inválida. Debe ser un número entero positivo.")
             continue
         carrera = input("| Carrera: ")
         estudiante = Estudiante(nombre, edad, carrera)
@@ -29,9 +29,9 @@ while True:
                 nota = float(nota_input)
                 estudiante.agregar_calificacion(nota)
             except ValueError:
-                print("│ ⚠️ Calificación inválida.")
+                print("│  Calificación inválida.")
         else:
-            print("│ ⚠️ Estudiante no encontrado.")
+            print("│  Estudiante no encontrado.")
 
     elif opcion == '3':
         nombre = input("\nNombre del estudiante: ")
@@ -39,12 +39,12 @@ while True:
         if estudiante:
             estudiante.mostrar_info()
         else:
-            print("│ ⚠️ Estudiante no encontrado.")
+            print("│  Estudiante no encontrado.")
 
     elif opcion == '4':
         print("\n/---- LISTA DE ESTUDIANTES ----\\")
         if not lista_estudiantes:
-            print("| ⚠️ No hay estudiantes registrados.           |")
+            print("|  No hay estudiantes registrados.           |")
         for est in lista_estudiantes:
             est.mostrar_info()
         print("\\--------------------------------/")
@@ -53,4 +53,4 @@ while True:
         print("\n\\ Gracias por usar el programa. ¡Hasta luego! /")
         break
     else:
-        print("│ ⚠️ Opción no válida. Intente de nuevo.")
+        print("│  Opción no válida. Intente de nuevo.")
