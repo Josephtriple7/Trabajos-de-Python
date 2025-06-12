@@ -9,10 +9,10 @@ class Grafo:
         self.es_dirigido = es_dirigido
         
     def agregar_vertice(self, vertice):
-        #Agregar un vértice si no existe
+        #Agregar un vertice si no existe
         if vertice not in self.grafo:
             self.grafo[vertice] = []
-            #Lista vacía de vecinos
+            #Lista vacia de vecinos
             print(f"Vertice '{vertice}' agregado.")
         else:
             print(f"Vertice '{vertice}' ya existe.")
@@ -49,7 +49,7 @@ class Grafo:
         return False
         #Si u no existe, no puede haber una arista
 
-#-----------------------PRUEBA DE IMPLEMENTACIÓN----------------------------------        
+#---------- PRUEBA DE IMPLEMENTACIÓN ----------        
 
 print("\n--- Grafo no dirigido ---")
 #Crea una instancia de grafo no dirigido
@@ -78,7 +78,7 @@ print(f"Vecinos de F: {grafo_nd.obtener_vecinos('F')}")
 print(f"¿Existe arista entre A y C? {grafo_nd.existe_arista('A', 'C')}")
 print(f"¿Existe arista entre A y D? {grafo_nd.existe_arista('A', 'D')}")
 
-#----------GRAFO DIRIGIDO----------
+#---------- GRAFO DIRIGIDO ----------
 
 print("\n--- Grafo dirigido ---")
 #Crea una nueva instancia de grafo, pero esta vez es dirigido

@@ -33,7 +33,7 @@ class Grafo:
             return True  
             # Un grafo vacio se considera conexo
             
-        # Elegimos un vértice arbitrario como punto de partida
+        # Elegimos un vertice arbitrario como punto de partida
         inicio = next(iter(self.grafo))
         visitados = set()
 
@@ -49,7 +49,7 @@ class Grafo:
         
         return len(visitados) == len(self.grafo)
 
-    # --- Método para encontrar un camino simple de inicio a fin usando BFS ---
+    # --- Metodo para encontrar un camino simple de inicio a fin usando BFS ---
     
     def encontrar_camino(self, inicio, fin):
         if inicio not in self.grafo or fin not in self.grafo:

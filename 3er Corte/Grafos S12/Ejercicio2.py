@@ -2,12 +2,12 @@ import collections
 
 class Grafo:
     def __init__(self, es_dirigido=False):
-        #Diccionario donde cada vertice tiene una lista de vecinos ( con pesos opcionales)
+        #Diccionario donde cada vertice tiene una lista de vecinos (con pesos opcionales)
         self.grafo = []
         self.es_dirigido = es_dirigido
     
     def agregar_vertice(self, vertice):
-        #Si el vertice no existe aun, lo agrega automaticamente con una lista vacía de vecinos
+        #Si el vertice no existe aun, lo agrega automaticamente con una lista vacia de vecinos
         if vertice not in self.grafo:
             self.grafo[vertice] = []
     
@@ -102,6 +102,6 @@ grafo.agregar_vertice('F')
 print("Recorrido BFS desde 'A':", grafo.bfs('A'))
 print("Recorrido DFS desde 'A':", grafo.dfs('A'))
 
-# Realizar BFS y DFS desde el vértice aislado 'F'
+# Realizar BFS y DFS desde el vertice aislado 'F'
 print("Recorrido BFS desde 'F':", grafo.bfs('F'))
 print("Recorrido DFS desde 'F':", grafo.dfs('F'))
